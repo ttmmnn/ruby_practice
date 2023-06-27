@@ -64,3 +64,30 @@ while i > 0
     puts i
     i -= 1
 end
+
+# 20から10まで、数値を一行ずつカウントダウン表示
+i = 20
+while i >= 10
+    puts i
+    i -= 1
+end
+
+# 20から10までの奇数を一行ずつカウントダウン表示する
+i = 19
+while i >= 10
+    puts i
+    i -= 2
+end
+
+puts "<select name='age'>"
+for age in 1..100
+    puts "<option>#{age}歳</option>"
+end
+puts "</select>"
+
+# for inを使って、箇条書きで1から100まで出力する
+puts "<ul>"
+for i in 1..100
+    puts "<li>#{i}</li>"
+end
+puts "</ul>"
