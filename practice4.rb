@@ -92,3 +92,68 @@ for num in numbers
     sum = sum + num
 end
 puts sum
+
+# ループで配列を操作する
+team = ["勇者", "戦士", "魔法使い", "盗賊"]
+(1..5).each do |i|
+	puts i
+end
+
+#配列の中身をループで表示する
+enemy = ["スライム", "モンスター", "ゾンビ", "ドラゴン", "魔王"]
+enemy.each do |enemy|
+    puts "#{enemy}が現れた"
+end
+
+# 要素を合計を計算する
+numbers = [12, 34, 56, 78, 90]
+sum = 0
+numbers.each do |num|
+    sum = sum + num
+end
+puts sum
+
+# 取り込んだデータを配列に格納する
+line = gets.chomp.split(",") # splitは配列で取得するメソッド
+p line
+puts line.length
+line.each do |enemy|
+    puts "#{enemy}が現れた!"
+end
+
+#文字列をカンマで分割する
+team_str = "勇者,戦士,忍者,魔法使い"
+team = team_str.split(",")
+p team
+
+#英文の単語数を数える
+str = "One cold rainy day when my father was a little boy he met an old alley cat on his street"
+i = str.split(" ")
+puts i.length
+
+# 標準入力から読み込んだ以下のURLを分割する
+# https://paiza.jp/cgc/users/ready
+url_str = gets.chomp.split("/")
+p url_str
+
+# 複数行データを配列に格納する
+array = []
+while line = gets
+    line.chomp!
+    array.push(line)
+end
+p array
+
+# 標準入力から読み込んだ複数行を出力する
+while line = gets
+	line.chomp!
+	puts "#{line}が現れた"
+end
+
+# 標準入力から読み込んだ複数行を配列に格納しよう
+array = []
+while line = gets
+    line.chomp!
+    array.push(line)
+end
+p array
