@@ -70,3 +70,25 @@ p weapon
 # 配列の要素の個数を出力する
 weapon = ["木の棒", "鉄の棒", "鉄の剣", "銅の剣", "石斧", "エクスカリバー"]
 puts weapon.length
+
+# 配列をプルダウン選択する
+team = ["勇者", "戦士","魔法使い", "盗賊"]
+puts "<select name='job'>"
+for job in team
+    puts "<option>#{job}</option>"
+end
+puts "</select>"
+
+#配列の中身をループで表示する
+enemy = ["スライム", "モンスター", "ゾンビ", "ドラゴン", "魔王"]
+for i in enemy
+    puts "#{i}が現れた"
+end
+
+# 要素を合計を計算する
+numbers = [12, 34, 56, 78, 90]
+sum = 0
+for num in numbers
+    sum = sum + num
+end
+puts sum
