@@ -196,3 +196,26 @@ for i in 1..imput_line
     item = gets.chomp
     puts "<img src = '#{items_img[item]}'>"
 end
+
+# ハッシュにシンボルを使ってみる
+enemies1 = {"ザコ" => "スライム", "中ボス" => "ドラゴン", "ボス" => "魔王"}
+p enemies1
+p enemies1["ザコ"]
+# ハッシュにシンボルを使う１
+enemies2 = {:zako => "スライム", :boss => "ドラゴン", :king => "魔王"}
+p enemies2
+p enemies2[:boss]
+# ハッシュにシンボルを使う２
+enemies3 = {zako: "スライム", boss: "ドラゴン", king: "魔王"}
+p enemies3
+p enemies3[:king]
+
+enemies3.each do |level, enemy|
+    puts "#{level}の#{enemy}が、現れた！"
+end
+
+
+skills = {job: "戦士", power: 100, magic: 200, gold: 380, luck: 1000}
+skills.each do |key, item|
+  puts "#{key} = #{item}"
+end
