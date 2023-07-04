@@ -104,3 +104,34 @@ basket = [["木の棒", "こん棒", "エクスカリバー"], ["おにぎり", 
 # ここに、要素を削除するコードを記述する
 basket[2].delete_at(2)
 p basket
+
+
+# ループで配列を処理する
+team = ["勇者", "戦士", "魔法使い"]
+p team
+p team[0]
+
+# 配列のインデックスの番号を取得するには.each_with_indexメソッドを使う
+team.each_with_index do |person, i|
+    puts "#{i + 1}番目の#{person}が、スライムと戦った"
+end
+
+numbers = [3, 1, 4, 1, 5]
+results = []
+numbers.each do |item|
+    results.push(item * 10)
+end
+p results
+
+# mapは繰り返し処理の結果を配列にしたいときに使う
+results2 = numbers.map do |item|
+    item * 20
+end
+p results2
+
+# 配列から要素を順に取り出して、「A番目のBが現れた！」と出力
+enemies = ["スライム", "モンスター", "ゾンビ", "ドラゴン", "魔王"]
+# ここに、要素をループで表示するコードを記述する
+enemies.each_with_index do |enemy, i|
+    puts "#{i + 1}番目の#{enemy}が現れた！"
+end
