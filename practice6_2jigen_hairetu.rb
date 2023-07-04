@@ -129,9 +129,19 @@ results2 = numbers.map do |item|
 end
 p results2
 
+
 # 配列から要素を順に取り出して、「A番目のBが現れた！」と出力
 enemies = ["スライム", "モンスター", "ゾンビ", "ドラゴン", "魔王"]
 # ここに、要素をループで表示するコードを記述する
 enemies.each_with_index do |enemy, i|
     puts "#{i + 1}番目の#{enemy}が現れた！"
 end
+
+
+# numbers配列の要素を3倍にした、新しい配列を作って、pメソッドで出力
+numbers = [12, 34, 56, 78, 90]
+numbers2 = numbers.map do |item|
+    item * 3
+end
+p numbers2
+
