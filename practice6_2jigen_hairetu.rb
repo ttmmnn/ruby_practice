@@ -145,3 +145,83 @@ numbers2 = numbers.map do |item|
 end
 p numbers2
 
+
+# 2次元配列をmapで作成する
+numbers = Array.new(10, 1)
+p numbers
+p numbers.length
+
+numbers2 = Array.new(4, Array.new(3, 1))
+numbers2[0][1] = 2
+p numbers2
+p numbers2.length
+
+numbers3 = Array.new(4).map{Array.new(3, 1)}
+numbers3[0][1] = 2
+p numbers3
+
+
+# Array.newを使って、要素数が5、初期値が"paiza"という配列を作成
+paiza_array = Array.new(5, "paiza")
+p paiza_array
+
+
+# Array.newとmapメソッドを使って、次のような2次元配列を作成して、pメソッドで出力
+# 要素数は、5個   [7,7,7,7]という配列を要素にする
+numbers = Array.new(5).map{Array.new(4, 7)}
+p numbers
+
+
+# ドット絵を表示する
+enemy_img = [[0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0],
+             [1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1],
+             [1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1],
+             [1,1,0,0,0,0,1,1,0,0,0,0,0,0,1,1],
+             [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+             [0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0],
+             [0,0,0,0,1,1,1,0,0,0,0,0,0,1,1,1]]
+
+enemy_img.each do |line|
+    # p line
+    line.each do |dot|
+        # print dot
+        if dot == 1
+            print "#"
+        else
+            print " "
+        end
+    end
+    puts ""
+end
+
+enemy_img.each do |line|
+  line.each do |dot|
+      if dot == 1
+          print "."
+      else
+          print " " 
+      end
+  end
+  puts ""
+end
+
+
+# ドットで文字を出力しよう
+letter_A = [[0,0,1,1,0,0],
+            [0,1,0,0,1,0],
+            [1,0,0,0,0,1],
+            [1,1,1,1,1,1],
+            [1,0,0,0,0,1],
+            [1,0,0,0,0,1]]
+
+# ここに、ドットを表示するコードを記述する
+letter_A.each do |line|
+    line.each do |dot|
+        if dot == 1
+            print "@"
+        else
+            print " "
+        end
+    end
+    puts ""
+end
