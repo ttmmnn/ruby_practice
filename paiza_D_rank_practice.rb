@@ -136,3 +136,36 @@ if n == 7
 else
     puts "No"
 end
+
+
+# ある数字までの出力 2
+# 正の整数 N が与えられます。
+# 1 ~ N の整数を 1 から順に改行区切りで出力してください。
+n = gets.to_i
+n.times do |i|
+    puts i + 1
+end
+
+n = gets.to_i
+for i in 1..n
+    puts i
+    i = n + 1
+end
+
+
+# FizzBuzz
+# 1 ~ 100 の整数に対して、3 と 5 の両方で割り切れるなら FizzBuzz を、 
+# 3 でのみ割り切れるなら Fizz 、
+# 5 でのみ割り切れるなら Buzz を改行区切りで出力してください。
+# また、どちらでも割り切れない場合は、その数字を改行区切りで出力してください。
+for i in 1..100
+  if i % 15 == 0
+      puts "FizzBuzz"
+  elsif i % 5 == 0
+      puts "Buzz"
+  elsif i % 3 == 0
+      puts "Fizz"
+  else
+      puts i
+  end
+end
