@@ -45,6 +45,11 @@ line = gets.split(" ")
 line.each do |i|
     puts i
 end
+# もしくは
+s, t = gets.split(" ")
+puts s
+puts t
+
 
 
 # 入力された 2 つの文字列を出力
